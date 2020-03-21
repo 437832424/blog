@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input-counter></input-counter>
+    </div>
+    <script>
+        // Vue.filter('transInput', function (value) {
+        //     value=value.replace(/{{(\d+)}}/g,function(str, s1){
+        //         console.log(str)
+        //                         return '<input/>'.repeat(s1)})
+        //     // value.replace(/{{(\d+)}}/g,function(str, s1){return '<input/>'.repeat(s1) });
+        //     return value
+        // })
+    </script>
+    <script>
+        Vue.component('input-counter', {
+            data: function () {
+                return {
+                    list:[
+                        '{{2}}学习，天天{{2}}',
+                        '心之{{2}}，{{2}}以往',
+                    ].map((item)=>item.replace(/{{(\d+)}}/g,'<input/>'))
+                }
+            },
+            template: `
+            <div>
+                <div v-for="(item,i) in list" v-html="item"></div>
+            </div>
+            `
+        })
+    </script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
