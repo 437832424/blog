@@ -1,51 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<meta charset="UTF-8">
+	<title>resume</title>
+	<link rel="stylesheet" href="../resume/css/reset.css">
+	<link rel="stylesheet" href="../resume/css/font-awesome.css">
+	<link rel="stylesheet" href="css/jquery.galpop.css">
+	<link rel="stylesheet" href="../resume/css/layout.css">
+	<script src="../resume/js/jquery.1.12.4.min.js"></script>
+	<script src="js/jquery.galpop.js"></script>
+	<script src="../resume/js/main.js"></script>
 </head>
-
 <body>
-    <div id="app">
-        <input-counter></input-counter>
-    </div>
-    <script>
-        // Vue.filter('transInput', function (value) {
-        //     value=value.replace(/{{(\d+)}}/g,function(str, s1){
-        //         console.log(str)
-        //                         return '<input/>'.repeat(s1)})
-        //     // value.replace(/{{(\d+)}}/g,function(str, s1){return '<input/>'.repeat(s1) });
-        //     return value
-        // })
-    </script>
-    <script>
-        Vue.component('input-counter', {
-            data: function () {
-                return {
-                    list:[
-                        '{{2}}学习，天天{{2}}',
-                        '心之{{2}}，{{2}}以往',
-                    ].map((item)=>item.replace(/{{(\d+)}}/g,'<input/>'))
-                }
-            },
-            template: `
-            <div>
-                <div v-for="(item,i) in list" v-html="item"></div>
-            </div>
-            `
-        })
-    </script>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
+	<div class="bg_img"></div>
+	<div class="wrap">
+		<div class="nav-wrap">
+			<div class="nav-slider"></div>
+			<ul>
+				<li><a href="#" title="个人介绍"><i class="fa fa-user-secret"></i></a></li>
+				<li><a href="#" title="教育背景"><i class="fa fa-graduation-cap"></i></a></li>
+				<li><a href="#" title="工作经历"><i class="fa fa-users"></i></a></li>
+				<li><a href="#" title="技能掌握"><i class="fa fa-wrench"></i></a></li>
+			</ul>
+		</div>
 
-            }
-        })
-    </script>
+		<div class="content person">
+			<div class="content_inner">
+				<div class="img">
+					<div class="img_bg person_log"></div>
+					<h2 class="name">雷华锋</h2>
+					<span class="subname">追逐前端</span>
+				</div>
+				<div class="panel center">
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-birthday-cake"></i></span><span class="panelTd">1993/12/11</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-map-marker"></i></span><span class="panelTd">湖南省/长沙市/岳麓区</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-phone"></i></span><span class="panelTd">15570850894</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-envelope"></i></span><span class="panelTd">437832424@qq.com</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="content education" >	
+			<div class="content_inner">
+				<div class="img">
+					<div class="img_bg shcool_log"></div>
+					<h2 class="name">中南林业科技大学涉外学院</h2>
+					<span class="subname">Swan college of Central South University of Forestry and Technology</span>
+				</div>
+				<div class="panel">
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-calendar"></i></span><span class="panelTd">入学时间</span></p>
+					<p class="panelRow panelRow-n-10"><span class="panelTd text">2014.9 - 2018.6 本科全日制</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-graduation-cap"></i></span><span class="panelTd">毕业院系</span></p>
+					<p class="panelRow panelRow-n-10"><span class="panelTd text">涉外学院 - 计算机系</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-book"></i></span><span class="panelTd">主修课程</span></p>
+					<p class="panelRow panelRow-n-10"><span class="panelTd text">C语言程序设计、Java、Javeweb、数据库原理、Oracle、sqlserver、数据结构、算法与分析、Linux、计算机组成原理、系统结构、网络安全</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-trophy"></i></span><span class="panelTd">曾获荣誉</span></p>
+					<p class="panelRow panelRow-n-10"><span class="panelTd text">优秀班干部、优秀社团干事、甲等助学金等</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-user-circle"></i></span><span class="panelTd">在校表现</span></p>
+					<p class="panelRow"><span class="panelTd text">在校期间各项表现良好,学习成绩优良。入学期间通过竞选积极参与班级建设，担任班干部职务，校内积极参与社团活动，课余时间关注it行业，代码学习，并实际操作，从中受益良多。</span></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content work">
+			<div class="content_inner">
+				<div class="img">
+					<div class="img_bg work_log"></div>
+					<h2 class="name">湖南智卓创新信息产业股份有限公司</h2>
+					<span class="subname">银行业信息化资源解决方案与服务提供商</span>
+				</div>
+				<div class="panel">
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-calendar"></i></span><span class="panelTd">入职时间</span></p>
+					<p class="panelRow"><span class="panelTd text">2018.12 - 至今</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-street-view"></i></span><span class="panelTd">任职部门</span></p>
+					<p class="panelRow"><span class="panelTd text">研发部</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-id-badge"></i></span><span class="panelTd">职位名称</span></p>
+					<p class="panelRow"><span class="panelTd text">初级前端工程师</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-wrench"></i></span><span class="panelTd">工作内容</span></p>
+					<p class="panelRow"><span class="panelTd text">负责公司项目开发中的前端事宜，主要内容如下：</br>1、根据需求输出产品界面设计及交互设计。</br>2、输出适合后端人员介入的静态模板。</br>3、解决开发过程中遇到的前端相关的样式BUG及JS问题。</br>4、完成领导指派的其他设计任务或需求等。</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-cubes"></i></span><span class="panelTd">成果展示</span><span class="panelTd text right">部分设计+前端实现</span></p>
+					<ul>
+						<li href="img/work_img_lg/alp.png" class="galpop" data-galpop-group="gallery">
+							<img class="img_size" src ="img/work_img_sm/alp_sm.png" alt ="alp_sm"/>
+						</li>
+
+						<li href="img/work_img_lg/npl_diytable.png" class="galpop p-2" data-galpop-group="gallery">
+							<img class="img_size" src ="img/work_img_sm/npl_diytable_sm.png" alt ="npl_diytable_sm"/>
+						</li>
+
+						<li href="img/work_img_lg/npl_echart.png" class="galpop" data-galpop-group="gallery">
+							<img class="img_size" src ="img/work_img_sm/npl_echart_sm.png" alt ="npl_echart_sm"/>
+						</li>
+
+						<li href="img/work_img_lg/npl_panel.png" class="galpop" data-galpop-group="gallery">
+							<img class="img_size" src ="img/work_img_sm/npl_panel_sm.png" alt ="npl_panel_sm"/>
+							
+						</li>
+
+						<li href="img/work_img_lg/npl_table.png" class="galpop p-2" data-galpop-group="gallery">
+							<img class="img_size" src ="img/work_img_sm/npl_table_sm.png" alt ="npl_table_sm"/>
+						</li>
+						
+						<li href="img/work_img_lg/rskmon.png" class="galpop" data-galpop-group="gallery">
+							<img class="img_size" src ="img/work_img_sm/rskmon_sm.png" alt ="rskmon_sm"/>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="content skill_evaluate">
+			<div class="content_inner">
+				<div class="img">
+					<div class="img_bg skill_log"></div>
+					<h2 class="name">前端技能</h2>
+					<span class="subname">学无止境</span>
+				</div>
+				<div class="panel">
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-css3"></i></span><span class="panelTd">HTML + CSS</span></p>
+					<p class="panelRow"><span class="panelTd text">熟记各类常用标签及其属性；能巧用各类CSS选择器，以及样式属性；熟练DIV+CSS布局，能查找web前端的各种跨浏览器兼容问题。</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-street-view"></i></span><span class="panelTd">JavaScript</span></p>
+					<p class="panelRow"><span class="panelTd text">致力于JQ技术，熟悉JQ相关类库，对各类常用JS开源脚本有较深积累及实战运用；</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-id-badge"></i></span><span class="panelTd">前端框架</span></p>
+					<p class="panelRow"><span class="panelTd text">精通Bootstrap框架应用，对layUI、antDesign等常见前端框架有所了解，研习。</span></p>
+					<p class="panelRow"><span class="panelTd p-head"><i class="fa fa-id-badge"></i></span><span class="panelTd">UI设计</span></p>
+					<p class="panelRow"><span class="panelTd text">对各端设计规范有所了解与运用，重视交互设计专注用户体验，具有良好审美能力，能运用PS、AI等输出设计作品。</span></p>
+				</div>
+				<div class="line"></div>
+				<div class="img">
+					<div class="img_bg evaluate_log"></div>
+					<h2 class="name">自我评价</h2>
+					<span class="subname">心之所向，素履以往</span>
+				</div>
+				<div class="panel">
+						<p class="panelRow"><span class="panelTd text">自入行以来，有自学
+						的迷惘，更有持之以恒的坚持；从后端转至前端有失落也有惊喜。时至今日，幸甚至哉，从当初小白的姿态，慢慢进入了互联这个网行业。</span></p>
+						<p class="panelRow"><span class="panelTd text">从Java到HTML，从后端到前端，从举步维艰的应届小白到矜矜业业的IT从业者。一年的工作经历，洗刷了自己的陋习，造就了我今日的秉性：勇于面对自己的无知，对新事物的向往！对新的技术，新的知识，更是渴望</span></p>
+						<p class="panelRow"><span class="panelTd text">面对挑战欣然接受，面对不足坦然弥补，面对未知尤为渴望。</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
-
 </html>
